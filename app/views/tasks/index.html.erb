@@ -1,0 +1,13 @@
+<h1>LE PETIT PONEY</h1>
+<ul style="list-style: none;">
+  <%@tasks.each do |task| %>
+    <li>
+    <%if task.completed?%><i class="fas fa-thumbs-up"></i><%else%><i class="fas fa-hand-middle-finger"></i><%end%>
+    <%= link_to task.title, task_path(task)  %>
+    <%= link_to task_path(task), method: :delete do  %>
+       <i class="fas fa-synagogue"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Create a new task", new_task_path %>

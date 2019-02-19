@@ -1,0 +1,6 @@
+<h1><%=@task.title%></h1>
+<h3><%=@task.details%></h3>
+<h3><%if @task.completed?%><i class="fas fa-thumbs-up"> This task is complete</i><%else%><i class="fas fa-hand-middle-finger"> Finnish this task you lazy bitch</i><%end%></h3>
+<%= link_to "Back to index",tasks_path%>
+
+<%= link_to "Changes properties",edit_task_path%>
